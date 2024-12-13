@@ -10,7 +10,7 @@ public class DistribuidoresRubros {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // Clave primaria única generada automáticamente
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "ruc", nullable = false) // Relación con Distribuidores

@@ -2,7 +2,7 @@ package com.logistica.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import java.util.List; // Asegúrate de importar esta clase
+import java.util.List;
 
 @Entity
 @Data
@@ -13,7 +13,7 @@ public class Rubros {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idRubro;
 
-    @Column(nullable = false, length = 255)
+    @Column(nullable = false, length = 255, unique = true) // Restricción para evitar nombres duplicados
     private String nombreRubro;
 
     @OneToMany(mappedBy = "rubro", cascade = CascadeType.ALL, orphanRemoval = true)

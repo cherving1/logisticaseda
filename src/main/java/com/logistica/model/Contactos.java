@@ -12,10 +12,10 @@ public class Contactos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 25, nullable = false)
+    @Column(length = 25) // Permitir que sea NULL
     private String telefono;
 
     @ManyToOne
-    @JoinColumn(name = "ruc", nullable = false)
+    @JoinColumn(name = "ruc", nullable = false) // Relación con Distribuidores
     private Distribuidores distribuidor;
 }

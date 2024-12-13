@@ -13,7 +13,7 @@ public class Distribuidores {
     @Column(length = 20, nullable = false)
     private String ruc;
 
-    @Column(nullable = false, length = 255)
+    @Column(nullable = false, length = 255, unique = true) // Restricción de nombres únicos
     private String nombre;
 
     @Column(length = 250)

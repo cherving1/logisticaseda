@@ -12,10 +12,10 @@ public class Observaciones {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 500, nullable = false)
+    @Column(nullable = false) // Cambio para permitir texto de longitud arbitraria
     private String observacion;
 
     @ManyToOne
-    @JoinColumn(name = "ruc", nullable = false)
+    @JoinColumn(name = "ruc", nullable = false) // Relación con Distribuidores
     private Distribuidores distribuidor;
 }
